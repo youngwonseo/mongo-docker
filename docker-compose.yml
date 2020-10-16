@@ -1,0 +1,17 @@
+version: '3'
+services: 
+  mongodb: 
+    image: mongo 
+    ports: 
+      - "9080:27017" 
+    volumes: 
+      - /home/ubuntu/mongodb:/data/db 
+    container_name: "docker-mongodb" 
+    env_file: 
+      - MONGO_HOST=localhost 
+      - MONGO_INITDB_ROOT_USERNAME= 
+      - MONGO_INITDB_ROOT_PASSWORD=
+      - MONGO_INITDB_DATABASE=
+
+
+
